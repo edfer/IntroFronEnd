@@ -59,33 +59,47 @@ var workOffset = cumulativeOffset(document.getElementById("work"));
 var aboutMeOffset = cumulativeOffset(document.getElementById("about-me"));
 var contactOffset = cumulativeOffset(document.getElementById("contact"));
 
-var itemInNavbar = document.getElementsByClassName('navbar').find("navbar-item");
+var itemInNavbar = document.getElementsByClassName('navbar-list')[0];
 
 window.addEventListener("scroll", changeMyStyle);
 
-function changeMyStyle(evt){
-	var previous;
+// function changeMyStyle(evt){
+// 	var previous;
 
-	if (window.pageYOffset >= 0 && window.pageYOffset < meOffset) {
-		if(!previous) {
-			previous = 1;
-		} else if(previous == 1){
-			return false;
-		}
+// 	if (window.pageYOffset >= 0 && window.pageYOffset < meOffset) {
+// 		if(!previous) {
+// 			previous = 1;
+// 		} else if(previous == 1){
+// 			return false;
+// 		}
 
-		itemInNavbar.style.boxShadow = 0px -3px 0 rgba(230, 230, 230, 0.9) inset;
-		document.querySelector("a[href='#me']").prentNode.ClassList.add("active");
-	} else if (window.pageYOffset >= 0 && window.pageYOffset < studiesOffset) {
-		if(!previous) {
-			previous = 2;
-		} else if(previous == 2){
-			return false;
-		}
+// 		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+// 		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+// 		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+// 		document.querySelector("a[href='#top-window']").prentNode.ClassList.add("active");
+// 	} else if (window.pageYOffset >= 0 && window.pageYOffset < studiesOffset) {
+// 		if(!previous) {
+// 			previous = 2;
+// 		} else if(previous == 2){
+// 			return false;
+// 		}
 
-		itemInNavbar.style.boxShadow = 0px -3px 0 rgba(230, 230, 230, 0.9) inset;
-		document.querySelector("a[href='#top-window']").prentNode.ClassList.add("active");
-	}
-}
+// 		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+// 		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+// 		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+// 		document.querySelector("a[href='#me']").prentNode.ClassList.add("active");
+// 	} else if (window.studiesOffset >= 0 && window.pageYOffset < workOffset) {
+// 		if(!previous) {
+// 			previous = 3;
+// 		} else if(previous == 3){
+// 			return false;
+// 		}
+
+// 		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+// 		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+// 		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+// 		document.querySelector("a[href='#studies']").prentNode.ClassList.add("active");
+// }
 
 
 
