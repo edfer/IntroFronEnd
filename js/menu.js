@@ -61,7 +61,7 @@ var workOffset = cumulativeOffset(document.getElementById("work"));
 var aboutMeOffset = cumulativeOffset(document.getElementById("about-me"));
 var contactOffset = cumulativeOffset(document.getElementById("contact"));
 
-var itemInNavbar = document.getElementsByClassName('navbar')[0];
+// var itemInNavbar = document.getElementsByClassName('navbar-item')[0];
 
 window.addEventListener("scroll", changeMyStyle);
 
@@ -75,7 +75,7 @@ function changeMyStyle(evt){
 		// 	return false;
 		// }
 
-		itemInNavbar.style.backgroundColor = "white";
+		
 		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
 		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
 		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
@@ -89,7 +89,7 @@ function changeMyStyle(evt){
 		// 	return false;
 		// }
 
-		itemInNavbar.style.backgroundColor = "red";
+		
 		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
 		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
 		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
@@ -104,7 +104,7 @@ function changeMyStyle(evt){
 		// 	return false;
 		// }
 
-		itemInNavbar.style.backgroundColor = "blue";
+		
 		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
 		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
 		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
