@@ -5,51 +5,176 @@
     <meta charset="UTF-8">
     <title>edfer</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-grid.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 
 <body>
     <header class="header" id="top">
-        
         <div class="title-img change-img" id="">
-        	<h1 class="title">Record. Edit. Done.</h1>
-        	<!-- <p id="tag-line">Record. Stop. Import. Edit. Export. Done.</p> -->
+            <h1 class="title">Record. Edit. Done.</h1>
+            <!-- <p id="tag-line">Record. Stop. Import. Edit. Export. Done.</p> -->
         </div>
-        
     </header>
     <nav class="navbar">
-    <div class="container">
-        <ul class="navbar-list">
-            <li class="navbar-item active">
-                <a href="#top" >Portada</a></li>
-            <li class="navbar-item">
-                <a href="#me">Quién soy</a></li>
-            <li class="navbar-item">
-                <a href="#studies">Estudios</a></li>
-            <li class="navbar-item">
-                <a href="#work">Experiencia</a></li>
-            <li class="navbar-item">
-                <a href="#about-me">Sobre mi</a></li>
-            <li class="navbar-item">
-                <a href="#contact">Contacto</a></li>
-        </ul>
+        <div class="container">
+            <div class="edfer">
+                <a href="#top"><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp; edfer</a>
+            </div>
+            <ul class="navbar-list">
+                <li class="navbar-item active">
+                    <a href="#top">Portada</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#me">Quién soy</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#studies">Estudios</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#work">Experiencia</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about-me">Sobre mi</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <section id="me" class="">
-		
+    <section id="me" class="container section-container">
+        <div class="col-50 me-img">
+            <figure>
+                <div>
+                    <img src="images/mirror-look-away copy.jpg" alt="">
+                </div>
+            </figure>
+            <figcaption>Este mismo soy yo.</figcaption>
+        </div>
+        <div class="col-50">
+            <header class="header">
+                <h1>Eduardo Fernández</h1>
+                <p>Experiencia como editor, camarógrafo, realizador audiovisual y, también, redactor publicitario.</p>
+                <p>He trabajado en Sony Entertainment Televisión, AXN, productoras independientes, agencias publicitarias y como autónomo en proyectos diversos.</p>
+                <p>Nivel alto de inglés</p>
+            </header>
+        </div>
     </section>
-    <section id="studies" class="">
-		
+    <div class="wide-black">
+        <section id="studies">
+            <header class="header">
+                <h1>Mi aprendizaje</h1>
+            </header>
+            <div class="row-flex container section-container">
+                <article class="studies-img studies-item col-25">
+                    <figure>
+                        <img src="images/studies/ucab.jpg" alt="Licenciatura">
+                        <figcaption>Comunicación Audiovisual</figcaption>
+                    </figure>
+                </article>
+                <article class="studies-img studies-item col-25">
+                    <figure>
+                        <img src="images/studies/complot.jpg" alt="Taller de creatividad">
+                        <figcaption>Publicidad</figcaption>
+                    </figure>
+                </article>
+                <article class="studies-img studies-item col-25">
+                    <figure>
+                        <img src="images/studies/ces.jpg" alt="Curso de técnico audiovisual">
+                        <figcaption>Cámaras HD</figcaption>
+                    </figure>
+                </article>
+                <article class="studies-img studies-item col-25">
+                    <figure>
+                        <img src="images/studies/keepcoding.jpg" alt="Bootcamp de programación web">
+                        <figcaption>Web Developer</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+    </div>
+    <section id="work" class="container section-container">
+        <header class="header-work col-50">
+            <h1>1 minuto de mi trabajo</h1>
+            <p>Podría contar que empecé como camarógrafo en rodajes de anuncios, luego muchos vídeos institucionales, cortos, largos, documentales, de ficción y que me apasiona la música y he hecho muchísimas grabaciones de bandas en directo.</p>
+            <p>Pero nada mejor que un resumen visual que hable por sí solo.</p>
+        </header>
+        <div class="video col-50 clearfix">
+            <iframe src="http://www.youtube.com/embed/cMcgXfbeI-M?controls=1" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
-    <section id="work" class="">
-		
-    </section>
-    <section id="about-me" class="">
-		
-    </section>
-    <section id="contact" class="">
-		
-    </section>
+    <div class="wide-dog">
+        <section id="about-me" class="container section-container">
+            <header class="header-work">
+                <h1>Fan de la música</h1>
+            </header>
+            <div class="background-top-5">
+                <div class="col-50 top-5">
+                    <ul class="top-5-list">
+                        <li id="syonic" class="top-5-item">
+                            <a href="http://www.sonicyouth.com/main/">Sonic Youth</a>
+                        </li>
+                        <li id="stereo" class="top-5-item">
+                            <a href="http://www.stereolab.co.uk/discography/">Stereolab</a>
+                        </li>
+                        <li id="cibo" class="top-5-item">
+                            <a href="http://www.yeahbasicallycibomatto.com/">Cibo Matto</a>
+                        </li>
+                        <li id="pixies" class="top-5-item">
+                            <a href="http://www.pixiesmusic.com/">The Pixies</a>
+                        </li>
+                        <li id="beck" class="top-5-item">
+                            <a href="http://www.beck.com/">Beck</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-about-me col-50">
+                <p>Como fanático de la música, siempre he pensado en mi <em>top 5</em> de bandas. Ahora me he animado a hacer mi lista de Rock (de hoy).</p>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section id="contact" class="section-container">
+            <header class="header">
+                <h1>¿Necesitas servicios audiovisuales?</h1>
+                <!-- <p>Cuéntanos qué quieres hacer y nos pondremos en contacto contigo lo antes posible</p> -->
+            </header>
+            <form id="form-contact" class="form" name="contact-batman" method="get" novalidate>
+                <div id="need-a-video-style">
+                    <label for="services-yes">Si</label>
+                    <input type="radio" id="services-yes" name="need-a-video" value="yes" required>
+                    <label for="services-no">No</label>
+                    <input type="radio" id="services-no" name="need-a-video" value="no" required>
+                </div>
+                <div id="require-service">
+                    <div class="form-row">
+                        <label for="first-name">Nombre:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Nombre" required>
+                        <label for="last-name">Apellido:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Apellido" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="name@email.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                        <label for="phone">Teléfono:(+34)</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Teléfono" pattern="^[9|8|7|6]\d{8}$" required>
+                    </div>
+                    <div class="form-textarea">
+                        <label for="textarea">Explica brevemente el proyecto que quieres realizar:</label>
+                        <textarea rows="10" cols="100"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" id="submit-request">Solicita info</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <footer>
+        edfer 2016
+    </footer>
 </body>
+<script src="js/form.js"></script>
 
 </html>

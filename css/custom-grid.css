@@ -1,0 +1,32 @@
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.col-25 {
+	width: 25%;
+	float: left;
+	display: inline-block;
+}
+
+.col-50 {
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+.col-75 {
+	width: 75%;
+	float: left;
+	display: inline-block;
+}
+
+.col-100 {
+	width: 100%;
+	float: left;
+	display: inline-block;
+}
