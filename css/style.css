@@ -117,21 +117,33 @@ body {
 
 .title-img {
 	height: 100vh;
-	background-image: url(../images/ballerina.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	/*transition-delay: 0.1s;
-	transition: all 0.5s ease-in-out;*/
+			/*animación*/
 	animation-name: ballerina-dance;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    -webkit-animation-name: ballerina-dance;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
 }
-/*
-.title-img:hover {
-	background-image: url(../images/ballerina3.jpg);
-}*/
+
+@keyframes ballerina-dance {
+	0% {background-image: url(../images/ballerina.jpg)}
+	50% {background-image: url(../images/ballerina2.jpg)}
+	100%{background-image: url(../images/ballerina3.jpg)}
+}
+
+@-webkit-keyframes ballerina-dance {
+	0% {background-image: url(../images/ballerina.jpg)}
+	50% {background-image: url(../images/ballerina2.jpg)}
+	100%{background-image: url(../images/ballerina3.jpg)}
+}
 
 	/*QUIENSOY*/
 
@@ -239,6 +251,11 @@ body {
 	background-clip: padding-box;
 	background-image: url(../images/dog-bite.jpg);
 	background-blend-mode: screen;
+	transition: background-image 1s ease-in-out;
+}
+
+.wide-dog:hover {
+	background-image: url(../images/dog-bite-angry.jpg)
 }
 
 #about-me p{
