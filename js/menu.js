@@ -110,6 +110,7 @@ function changeMyStyle(evt){
 		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
 		deleteActiveClass();
 		document.querySelector("a[href='#studies']").parentNode.classList.add("active");
+	}
 }
 
 function deleteActiveClass() {
