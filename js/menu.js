@@ -1,7 +1,13 @@
 var navbarItems = document.getElementsByClassName("navbar-item");
 
 for (var i = 0; i < navbarItems.length; i++){
+<<<<<<< HEAD
 	navbarItems[i].addEventListener("click", function(evt){	
+=======
+	navbarItems[i].addEventListener('click', function(evt){
+		
+	deleteActiveClass();	
+>>>>>>> master
 
 		deleteActiveClass();
 
@@ -62,7 +68,11 @@ var workOffset = cumulativeOffset(document.getElementById("work")) - 37;
 var aboutMeOffset = cumulativeOffset(document.getElementById("about-me")) -37;
 var contactOffset = cumulativeOffset(document.getElementById("contact")) - 37;
 
+<<<<<<< HEAD
 // var itemInNavbar = document.getElementsByClassName('navbar-item')[0];
+=======
+var itemInNavbar = document.getElementsByClassName('navbar-item')[0];
+>>>>>>> master
 
 window.addEventListener("scroll", changeMyStyle);
 
@@ -76,8 +86,16 @@ function changeMyStyle(evt){
 			return false;
 		}
 
+<<<<<<< HEAD
 		deleteActiveClass();
 		document.querySelector('a[href="#home"]').parentNode.classList.add("active");
+=======
+		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+		deleteActiveClass();
+		document.querySelector("a[href='#top-window']").parentNode.classList.add("active");
+>>>>>>> master
 
 	} else if (window.pageYOffset >= meOffset && window.pageYOffset < studiesOffset) {
 		if(!previous) {
@@ -86,10 +104,19 @@ function changeMyStyle(evt){
 			return false;
 		}
 
+<<<<<<< HEAD
 		deleteActiveClass();
 		document.querySelector("a[href='#me']").parentNode.classList.add("active");
 
 
+=======
+		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+		deleteActiveClass();
+		document.querySelector("a[href='#me']").parentNode.classList.add("active");
+
+>>>>>>> master
 	} else if (window.pageYOffset >= studiesOffset && window.pageYOffset < workOffset) {
 		if(!previous) {
 			previous = 3;
@@ -97,6 +124,7 @@ function changeMyStyle(evt){
 			return false;
 		}
 
+<<<<<<< HEAD
 		deleteActiveClass();
 		document.querySelector("a[href='#studies']").parentNode.classList.add("active");
 
@@ -109,6 +137,15 @@ function changeMyStyle(evt){
 
 		deleteActiveClass();
 		document.querySelector("a[href='#work']").parentNode.classList.add("active")
+=======
+		itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
+		itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
+		itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+		deleteActiveClass();
+		document.querySelector("a[href='#studies']").parentNode.classList.add("active");
+	}	
+}
+>>>>>>> master
 
 	} else if (window.pageYOffset >= aboutMeOffset && window.pageYOffset < contactOffset){
 		if (!previous) {
@@ -117,6 +154,7 @@ function changeMyStyle(evt){
 			return false;
 		}
 
+<<<<<<< HEAD
 		deleteActiveClass();
 		document.querySelector("a[href='#about-me']").parentNode.classList.add("active")
 	} else if (window.pageYOffset >= contactOffset && window.pageYOffset < (pageYOffset + 500)) {
@@ -137,6 +175,14 @@ function deleteActiveClass() {
 		navbarItems[i].classList.remove("active");	
 	}
 }
+=======
+function deleteActiveClass() {
+	for(var i = 0; i < navbarItems.length; i++){
+
+		navbarItems[i].classList.remove('active');
+	
+}
+>>>>>>> master
 
 
 
