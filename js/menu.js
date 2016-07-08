@@ -18,7 +18,7 @@ for (var i = 0; i < navbarItems.length; i++){
 function getElementByIdAndScroll(name) {
 	var elem;
 	if (name == '') {
-		elem = document.getElementById("top-window");
+		elem = document.getElementsByClassName("header00")[0];
 	} else {
 		elem = document.getElementById(name);
 	}
@@ -55,6 +55,7 @@ var cumulativeOffset = function(element) {
 	return top;
 };
 
+
 var meOffset = cumulativeOffset(document.getElementById("me"));
 var studiesOffset = cumulativeOffset(document.getElementById("studies"));
 var workOffset = cumulativeOffset(document.getElementById("work"));
@@ -76,11 +77,9 @@ function changeMyStyle(evt){
 		// }
 
 		
-		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
-		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
-		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+
 		deleteActiveClass();
-		document.querySelector("a[href='#top-window']").parentNode.classList.add("active");
+		document.querySelector("a[href='#']").parentNode.classList.add("active");
 
 	} else if (window.pageYOffset >= meOffset && window.pageYOffset < studiesOffset) {
 		// if(!previous) {
@@ -90,9 +89,7 @@ function changeMyStyle(evt){
 		// }
 
 		
-		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
-		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
-		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+
 		deleteActiveClass();
 		document.querySelector("a[href='#me']").parentNode.classList.add("active");
 
@@ -105,9 +102,7 @@ function changeMyStyle(evt){
 		// }
 
 		
-		// itemInNavbar.style.boxShadow = "0px -3px 0 rgba(230, 230, 230, 0.9) inset";
-		// itemInNavbar.style.color = "rgba(250, 250, 250, 1)";
-		// itemInNavbar.style.backgroundColor = "rgba(20, 20, 20, 0.9)";
+
 		deleteActiveClass();
 		document.querySelector("a[href='#studies']").parentNode.classList.add("active");
 	}
