@@ -5,6 +5,7 @@
 body {
 	font-family: 'Muli', sans-serif;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .clearfix:after {
@@ -93,7 +94,7 @@ body {
 	font-size: 14px;	
 }
 
-.navbar .navbar-list .navbar-item.active {
+.navbar .navbar-list .navbar-item.active a{
 	box-shadow: 0px -3px 0 rgba(230, 230, 230, 0.9) inset;
 	color: rgba(250, 250, 250, 1);
 	background-color: rgba(20, 20, 20, 0.9);
@@ -110,7 +111,7 @@ body {
 }
 
 .navbar .navbar-list .navbar-item a:hover {
-	box-shadow: 0px -3px 0 rgba(230, 230, 230, 0.9) inset;
+	/*box-shadow: 0px -3px 0 rgba(230, 230, 230, 0.9) inset;*/
 	color: rgba(250, 250, 250, 1);
 	background-color: rgba(20, 20, 20, 0.9);
 }
@@ -292,7 +293,7 @@ body {
 	background-image: url(../images/dog-bite.jpg);
 	background-blend-mode: screen;
 	transition: background-image 1s ease-in-out;
-	transition-delay: 1s;
+	transition-delay: 0.8s;
 }
 
 .wide-dog:hover {
@@ -334,6 +335,11 @@ body {
 	text-decoration: none;
 }
 
+.top-5-item a:hover{
+	color:rgba(220, 220, 220, 0.7);
+	text-decoration: none;
+}
+
 	/*CONTACTO*/
 
 #contact {
@@ -361,8 +367,31 @@ body {
 	display: none;
 }
 
+.footer {
+	/*position: relative;
+	top:30px;
+	color: rgba(1, 1, 1, 0.8);
+	font-size: 20px;
+	text-align: center;*/
+	background-image: url(../images/black-sheep_footer.jpg);
+	height: 350px;
+	width:100%;
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
 
 
+.footer h5 {
+	position: relative;
+	top:50%;
+	right:-26%;
+	color: rgba(1, 1, 1, 0.8);
+	font-size: 30px;
+	text-align: center;
+
+}
 
 
 

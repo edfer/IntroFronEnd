@@ -27,7 +27,7 @@ function getElementByIdAndScroll(name) {
 }
 
 function scrollToElement(element) {
-	var jump = parseInt(element.getBoundingClientRect().top * .5);
+	var jump = parseInt(element.getBoundingClientRect().top * .3);
 	document.body.scrollTop += jump;
 	document.documentElement.scrollTop += jump;
 
@@ -56,56 +56,80 @@ var cumulativeOffset = function(element) {
 };
 
 
-var meOffset = cumulativeOffset(document.getElementById("me"));
-var studiesOffset = cumulativeOffset(document.getElementById("studies"));
-var workOffset = cumulativeOffset(document.getElementById("work"));
-var aboutMeOffset = cumulativeOffset(document.getElementById("about-me"));
-var contactOffset = cumulativeOffset(document.getElementById("contact"));
+var meOffset = cumulativeOffset(document.getElementById("me")) - 37;
+var studiesOffset = cumulativeOffset(document.getElementById("studies")) -37;
+var workOffset = cumulativeOffset(document.getElementById("work")) - 37;
+var aboutMeOffset = cumulativeOffset(document.getElementById("about-me")) -37;
+var contactOffset = cumulativeOffset(document.getElementById("contact")) - 37;
 
 // var itemInNavbar = document.getElementsByClassName('navbar-item')[0];
 
 window.addEventListener("scroll", changeMyStyle);
 
 function changeMyStyle(evt){
-	// var previous;
+	var previous;
 
 	if (window.pageYOffset >= 0 && window.pageYOffset < meOffset) {
-		// if(!previous) {
-		// 	previous = 1;
-		// } else if(previous == 1){
-		// 	return false;
-		// }
-
-		
+		if(!previous) {
+			previous = 1;
+		} else if(previous == 1){
+			return false;
+		}
 
 		deleteActiveClass();
-		document.querySelector("a[href='#']").parentNode.classList.add("active");
+		document.querySelector('a[href="#home"]').parentNode.classList.add("active");
 
 	} else if (window.pageYOffset >= meOffset && window.pageYOffset < studiesOffset) {
-		// if(!previous) {
-		// 	previous = 2;
-		// } else if(previous == 2){
-		// 	return false;
-		// }
-
-		
+		if(!previous) {
+			previous = 2;
+		} else if(previous == 2){
+			return false;
+		}
 
 		deleteActiveClass();
 		document.querySelector("a[href='#me']").parentNode.classList.add("active");
 
 
 	} else if (window.pageYOffset >= studiesOffset && window.pageYOffset < workOffset) {
-		// if(!previous) {
-		// 	previous = 3;
-		// } else if(previous == 3){
-		// 	return false;
-		// }
-
-		
+		if(!previous) {
+			previous = 3;
+		} else if(previous == 3){
+			return false;
+		}
 
 		deleteActiveClass();
 		document.querySelector("a[href='#studies']").parentNode.classList.add("active");
+
+	} else if 	(window.pageYOffset >= workOffset && window.pageYOffset < aboutMeOffset) {
+		if (!previous) {
+			previous = 4;
+		} else if(previous == 4){
+			return false;
+		}
+
+		deleteActiveClass();
+		document.querySelector("a[href='#work']").parentNode.classList.add("active")
+
+	} else if (window.pageYOffset >= aboutMeOffset && window.pageYOffset < contactOffset){
+		if (!previous) {
+			previous = 5;
+		} else if (previous == 5){
+			return false;
+		}
+
+		deleteActiveClass();
+		document.querySelector("a[href='#about-me']").parentNode.classList.add("active")
+	} else if (window.pageYOffset >= contactOffset && window.pageYOffset < (pageYOffset + 500)) {
+		if (!previous) {
+			previous = 5;
+		} else if (previous == 5){
+			return false;
+		}
+
+		deleteActiveClass();
+		document.querySelector("a[href='#contact']").parentNode.classList.add("active");
 	}
+	
 }
 
 function deleteActiveClass() {
