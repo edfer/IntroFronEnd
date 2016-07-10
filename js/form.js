@@ -30,9 +30,14 @@ noNeedVideo.addEventListener("click", function(evt) {
     }
 });
 
+function hasFormValidation() {
 
+    return (typeof document.createElement('input').checkValidity == 'function');
+
+};
 
 form.addEventListener("submit", function(evt) {
+
 
 
     var firstNameInput = document.getElementById("first-name");
@@ -40,53 +45,84 @@ form.addEventListener("submit", function(evt) {
     var emailInput = document.getElementById("email");
     var phoneNumInput = document.getElementById("phone-num");
 
-    var button = document.getElementById("submit-request");
 
-    if (firstNameInput.checkValidity() == false) {
-        alert("Falta tu nombre");
-        firstNameInput.focus();
-        evt.preventDefault();
-        return false;
-    }
+    if (hasFormValidation()) {
 
-    if (lastNameInput.checkValidity() == false) {
-        alert("Falta tu apellido");
-        lastNameInput.focus();
-        evt.preventDefault();
-        return false;
-    }
 
-    if (emailInput.checkValidity() == false) {
-    	alert("Falta el email");
-    	emailInput.focus();
-    	evt.preventDefault();
-    	return false;
-    }
 
-    if (phoneNumInput.checkValidity() == false) {
-    	alert("Falta el teléfono");
-    	phoneNumInput.focus();
-    	evt.preventDefault();
-    	return false;
-    }
 
-    
 
-    
-    // evt.preventDefault();
+        var button = document.getElementById("submit-request");
 
-    setTimeout(function(){
+        if (firstNameInput.checkValidity() == false) {
+            alert("Falta tu nombre");
+            firstNameInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (lastNameInput.checkValidity() == false) {
+            alert("Falta tu apellido");
+            lastNameInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (emailInput.checkValidity() == false) {
+            alert("Falta el email");
+            emailInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (phoneNumInput.checkValidity() == false) {
+            alert("Falta el teléfono");
+            phoneNumInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+    } else {
+
+        if (firstNameInput.value.length == 0) {
+            alert("Falta tu nombre");
+            firstNameInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (lastNameInput.value.length == 0) {
+            alert("Falta tu apellido");
+            lastNameInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (emailInput.value.length == 0) {
+            alert("Falta tu apellido");
+            emailInput.focus();
+            evt.preventDefault();
+            return false;
+        } 
         
-        sendNotification("Nos pondremos en contacto en 24h", "Para más información, Mastercard");
+        if (phoneNumInput.value.length == 0) {
+            alert("Falta tu apellido");
+            phoneNumInput.focus();
+            evt.preventDefault();
+            return false;
+        }       
 
-    }, 1000);
-
-    
-
+    }
 });
 
 
 
+// evt.preventDefault();
+
+// setTimeout(function() {
+
+//     sendNotification("Nos pondremos en contacto en 24h", "Para más información, Mastercard");
+
+// }, 1000);
 
 
 
@@ -103,3 +139,10 @@ form.addEventListener("submit", function(evt) {
 
 
 
+
+
+
+
+
+
+//
