@@ -7,7 +7,11 @@ for (var i = 0; i < navbarItems.length; i++) {
 
         deleteActiveClass();
 
-        this.classList.add('active');
+        if (Modernizr.classList) {
+            this.classList.add('active');
+        } else {
+            this.className += ' active';
+        }
 
         var sectionToGo = this.getElementsByTagName("a")[0].href.split("#");
 
@@ -98,8 +102,10 @@ function changeMyStyle(evt) {
 
 
         deleteActiveClass();
-
+        
         document.querySelector("a[href='#me']").parentNode.classList.add("active");
+
+
 
 
 
@@ -157,14 +163,15 @@ function changeMyStyle(evt) {
 
 
     }
+}
 
-    function deleteActiveClass() {
-        for (var i = 0; i < navbarItems.length; i++) {
-            if (Modernizr.classList) {
-                navbarItems[i].classList.remove("active");
-            } else {
-                navbarItems[i].className = "navbar-item";
-            }
-
+function deleteActiveClass() {
+    for (var i = 0; i < navbarItems.length; i++) {
+        if (Modernizr.classList) {
+            navbarItems[i].classList.remove("active");
+        } else {
+            navbarItems[i].className = "navbar-item";
         }
+
     }
+}
