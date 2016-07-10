@@ -479,11 +479,11 @@ body {
 }*/
 
 #good-bye {
-	padding-top: 100px;
+	padding-top: 40px;
 	text-align: center;
 	color: rgb(20, 20, 20);
 	display: none;
-	font-size: 35px;
+	font-size: 30px;
 }
 
 .footer {

@@ -2,9 +2,9 @@ var form = document.getElementById("form-require-service");
 var textDescription = document.getElementById("text-description");
 
 
-if (!Modernizr.formvalidation) {
-    $.getScript('libs/h5f.min.js');
-}
+// if (!Modernizr.formvalidation) {
+//     $.getScript('libs/h5f.min.js');
+// }
 
 
 
@@ -17,6 +17,7 @@ needVideo.addEventListener("click", function(evt) {
     if (this.value == "yes") {
         textDescription.style.display = "block";
         firstNameInput.focus();
+        goodByeMessage.style.display = "none";
     }
 });
 
