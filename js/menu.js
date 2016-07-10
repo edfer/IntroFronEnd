@@ -92,6 +92,16 @@ function changeMyStyle(evt) {
         document.querySelector('a[href="#home"]').parentNode.classList.add("active");
 
 
+        // ESTE CÓDIGO CAMBIA EL COMPORTAMIENTO DE MI MENU EN SCROLL
+
+
+        // if (Modernizr.classList) {
+        //     document.querySelector('a[href="#home"]').parentNode.classList.add("active");
+        // } else(!Modernizr.classList) {
+        //     document.querySelector('a[href="#home"]').parentNode.className += " active";
+        // }
+
+
 
     } else if (window.pageYOffset >= meOffset && window.pageYOffset < studiesOffset) {
         if (!previous) {
@@ -102,7 +112,7 @@ function changeMyStyle(evt) {
 
 
         deleteActiveClass();
-        
+
         document.querySelector("a[href='#me']").parentNode.classList.add("active");
 
 
