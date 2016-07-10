@@ -1,9 +1,9 @@
-var meImg = document.getElementById('title-img-animated');
+var meImg = document.querySelector("img[src='images/mirror-look-away copy.jpg']");
 
-meImg.addEventListener('mousemove', function(evt){
-	meImg.style.backgroundPosition = evt.pageX * -1 / 12 + "px " + evt.pageY * -1 / 12 + "px";
+meImg.addEventListener("mouseover", function(evt){
+	meImg.src = "images/mirror-look-straight copy.jpg";
 });
 
-meImg.addEventListener('mouseleave', function(evt) {
-	meImg.style.backgroundPosition = "center center";
+meImg.addEventListener("mouseleave", function(evt){
+	meImg.src = "images/mirror-look-away copy.jpg";
 });

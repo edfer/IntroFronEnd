@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="css/custom-grid.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <script src="js/modernizr-custom.js"></script>
-    <script src="js/modernizr-cssanimations.js"></script>
-    <script src="js/modernizr-transitions.js"></script>
-    <script src="js/modernizr-formvalidation.js"></script>
+    <script src="libs/modernizr-custom.js"></script>
+    <script src="libs/modernizr-cssanimations.js"></script>
+    <script src="libs/modernizr-transitions.js"></script>
+    <!-- <script src="libs/modernizr-formvalidation.js"></script> -->
     <script src="libs/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="ie9checkvalididty.js"></script>
+    <!-- <script type="text/javascript" src="ie9checkvalididty.js"></script> -->
 </head>
 
 <body>
@@ -32,19 +32,19 @@
                 <li id="1" class="navbar-item active">
                     <a href="#home">Portada</a>
                 </li>
-                <li class="navbar-item">
+                <li id="2" class="navbar-item">
                     <a href="#me">Quién soy</a>
                 </li>
-                <li class="navbar-item">
+                <li id="3" class="navbar-item">
                     <a href="#studies">Estudios</a>
                 </li>
-                <li class="navbar-item">
+                <li id="4" class="navbar-item">
                     <a href="#work">Experiencia</a>
                 </li>
-                <li class="navbar-item">
+                <li id="5" class="navbar-item">
                     <a href="#about-me">Sobre mi</a>
                 </li>
-                <li class="navbar-item">
+                <li id="6" class="navbar-item">
                     <a href="#contact">Contacto</a>
                 </li>
             </ul>
@@ -53,7 +53,7 @@
     <section id="me" class="container section-container">
         <div class="col-50 me-img">
             <figure>
-                <div>
+                <div id="me-img-id">
                     <img src="images/mirror-look-away copy.jpg" alt="">
                 </div>
             </figure>
@@ -213,5 +213,6 @@
 <script src="js/form.js"></script>
 <script src="js/menu.js"></script>
 <script src="libs/send-notification.js"></script>
-
+<script src="js/animation-me.js"></script>
+<script src="js/ie9scrollmenu.js"></script>
 </html>

@@ -72,15 +72,15 @@ form.addEventListener("submit", function(evt) {
     
 
     
-    evt.preventDefault();
+    // evt.preventDefault();
 
     setTimeout(function(){
         
-        goodByeMessage;
+        sendNotification("Nos pondremos en contacto en 24h", "Para más información, Mastercard");
 
     }, 1000);
 
-    return true;
+    
 
 });
 
