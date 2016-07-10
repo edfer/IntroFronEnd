@@ -89,17 +89,17 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector('a[href="#home"]').parentNode.classList.add("active");
+        // document.querySelector('a[href="#home"]').parentNode.classList.add("active");
 
 
         // ESTE CÓDIGO CAMBIA EL COMPORTAMIENTO DE MI MENU EN SCROLL
 
 
-        // if (Modernizr.classList) {
-        //     document.querySelector('a[href="#home"]').parentNode.classList.add("active");
-        // } else(!Modernizr.classList) {
-        //     document.querySelector('a[href="#home"]').parentNode.className += " active";
-        // }
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#home"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#home"]').parentNode.className += " active";
+        }
 
 
 
@@ -113,8 +113,17 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector("a[href='#me']").parentNode.classList.add("active");
+        // document.querySelector("a[href='#me']").parentNode.classList.add("active");
 
+        // ESTE CÓDIGO CAMBIA EL COMPORTAMIENTO DE MI MENU EN SCROLL
+
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#me"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#me"]').parentNode.className += " active";
+        }
+
+        
 
 
 
@@ -129,7 +138,13 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector("a[href='#studies']").parentNode.classList.add("active");
+        // document.querySelector("a[href='#studies']").parentNode.classList.add("active");
+
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#studies"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#studies"]').parentNode.className += " active";
+        }
 
 
 
@@ -142,8 +157,13 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector("a[href='#work']").parentNode.classList.add("active");
+        // document.querySelector("a[href='#work']").parentNode.classList.add("active");
 
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#work"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#work"]').parentNode.className += " active";
+        }
 
 
 
@@ -157,7 +177,13 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector("a[href='#about-me']").parentNode.classList.add("active");
+        // document.querySelector("a[href='#about-me']").parentNode.classList.add("active");
+
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#about-me"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#about-me"]').parentNode.className += " active";
+        }
 
     } else if (window.pageYOffset >= contactOffset && window.pageYOffset < (pageYOffset + 500)) {
         if (!previous) {
@@ -168,7 +194,13 @@ function changeMyStyle(evt) {
 
         deleteActiveClass();
 
-        document.querySelector("a[href='#contact']").parentNode.classList.add("active");
+        // document.querySelector("a[href='#contact']").parentNode.classList.add("active");
+
+        if (Modernizr.classList) {
+            document.querySelector('a[href="#contact"]').parentNode.classList.add("active");
+        } else {
+            document.querySelector('a[href="#contact"]').parentNode.className += " active";
+        }
 
 
 
