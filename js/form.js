@@ -90,39 +90,46 @@ form.addEventListener("submit", function(evt) {
             return false;
         }
 
-        if (lastNameInput.value.length == 0) {
+
+
+        if (document.getElementById("last-name").value.length == 0) {
             alert("Falta tu apellido");
-            lastNameInput.focus();
+            document.getElementById("last-name").focus();
             evt.preventDefault();
             return false;
         }
 
-        if (emailInput.value.length == 0) {
-            alert("Falta tu apellido");
+
+
+        if (document.getElementById("email").value.length == 0) {
+            alert("Falta tu email");
             emailInput.focus();
             evt.preventDefault();
             return false;
-        } 
-        
+        }
+
         if (phoneNumInput.value.length == 0) {
-            alert("Falta tu apellido");
+            alert("Falta tu teléfono");
             phoneNumInput.focus();
             evt.preventDefault();
             return false;
-        }       
+        }
 
     }
+
+    // evt.preventDefault();
+
+    // setTimeout(function() {
+
+    //     sendNotification("Nos pondremos en contacto en 24h", "Para más información, Mastercard");
+
+    // }, 1000);
+
 });
 
 
 
-// evt.preventDefault();
 
-// setTimeout(function() {
-
-//     sendNotification("Nos pondremos en contacto en 24h", "Para más información, Mastercard");
-
-// }, 1000);
 
 
 
