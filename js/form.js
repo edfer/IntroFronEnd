@@ -1,6 +1,22 @@
 var form = document.getElementById("form-require-service");
 var textDescription = document.getElementById("text-description");
 
+// MAX-WORDS -> 250
+
+var textArea = document.getElementById('text-area');
+var maxWords = 250;
+
+
+var words = textArea.value.split(/\b[\s,\.-:;]*/);
+
+if (words.length > 2) {
+    words.splice(2);
+    textArea.value(words.join(''));
+}
+
+
+
+
 
 // if (!Modernizr.formvalidation) {
 //     $.getScript('libs/h5f.min.js');
@@ -16,6 +32,7 @@ var firstNameInput = document.getElementById("first-name");
 needVideo.addEventListener("click", function(evt) {
     if (this.value == "yes") {
         textDescription.style.display = "block";
+        textArea.setAttribute('required', 'true');
         firstNameInput.focus();
         goodByeMessage.style.display = "none";
     }
@@ -26,9 +43,17 @@ var goodByeMessage = document.getElementById("good-bye");
 noNeedVideo.addEventListener("click", function(evt) {
     if (this.value == "no") {
         textDescription.style.display = "none";
+        textArea.removeAttribute('required');
         goodByeMessage.style.display = "block";
     }
+
+
+
 });
+
+
+
+
 
 function hasFormValidation() {
 
@@ -37,6 +62,10 @@ function hasFormValidation() {
 };
 
 form.addEventListener("submit", function(evt) {
+
+
+
+
 
 
 
@@ -51,10 +80,10 @@ form.addEventListener("submit", function(evt) {
 
 
 
-
         var button = document.getElementById("submit-request");
 
         if (firstNameInput.checkValidity() == false) {
+            console.log(words);
             alert("Falta tu nombre");
             firstNameInput.focus();
             evt.preventDefault();
@@ -81,6 +110,19 @@ form.addEventListener("submit", function(evt) {
             evt.preventDefault();
             return false;
         }
+
+        if (document.getElementById("text-area").checkValidity() == false) {
+
+            alert("Describe brevemente los requerimientos de tu proyecto");
+            evt.preventDefault();
+            return false;
+
+
+
+        }
+
+        // VALIDATION FOR IE9
+
     } else {
 
         if (firstNameInput.value.length == 0) {
@@ -117,6 +159,22 @@ form.addEventListener("submit", function(evt) {
 
     }
 
+    // MAX-WORDS -> 250
+
+    // document.getElementById('text-area').oninput(function(){
+    //     var words = textArea.value.split(/\b[\s,\.-:;]*/);
+
+    //     alert('work');
+
+    // });
+
+
+
+
+
+
+
+
     // evt.preventDefault();
 
     // setTimeout(function() {
@@ -126,30 +184,3 @@ form.addEventListener("submit", function(evt) {
     // }, 1000);
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//

@@ -13,10 +13,13 @@
     <script src="libs/modernizr-transitions.js"></script>
     <!-- <script src="libs/modernizr-formvalidation.js"></script> -->
     <script src="libs/jquery-3.0.0.js"></script>
-    <script src="libs/h5f.min.js"></script>
-    <script>
+    <!-- <script src="libs/h5f.min.js"></script -->>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>
         H5F.setup(document.getElementById("form-require-service"));
-    </script>
+    </script> -->
+
+
     <!-- <script type="text/javascript" src="ie9checkvalididty.js"></script> -->
 </head>
 
@@ -199,7 +202,7 @@
                 </div>
                 <div id="text-description">
                     <label for="textarea">Explica brevemente el proyecto que quieres realizar:</label>
-                    <textarea rows="10" cols="100" placeholder="Opcionalmente, puedes darnos info sobre el proyecto"></textarea>
+                    <textarea id="text-area" rows="10" cols="100" placeholder="Opcionalmente, puedes darnos info sobre el proyecto" ></textarea>
                 </div>
                 <div class="form-row">
                     <button type="submit" id="submit-request">Solicita info</button>
