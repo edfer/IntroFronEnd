@@ -4,25 +4,11 @@ var textDescription = document.getElementById("text-description");
 // MAX-WORDS -> 250
 
 var textArea = document.getElementById('text-area');
-var maxWords = 250;
-
-
-var words = textArea.value.split(/\b[\s,\.-:;]*/);
-
-if (words.length > 2) {
-    words.splice(2);
-    textArea.value(words.join(''));
-}
-
-
-
-
+var maxWords = 151;
 
 // if (!Modernizr.formvalidation) {
 //     $.getScript('libs/h5f.min.js');
 // }
-
-
 
 var needVideo = document.getElementById("services-yes");
 var noNeedVideo = document.getElementById("services-no");
@@ -46,13 +32,37 @@ noNeedVideo.addEventListener("click", function(evt) {
         textArea.removeAttribute('required');
         goodByeMessage.style.display = "block";
     }
+});
 
+var words = textArea.value.split(/\b[\s,\.-:;]*/);
 
+textArea.addEventListener("input", function(evt) {
+    var words = textArea.value.split(/\b[\s,\.-:;]*/);
+
+    if (words.length > maxWords) {
+        words.splice(maxWords);
+        
+        words.pop();
+        textArea.value = words.join(' ');
+        
+    }
+
+    // console.log('words: ', words);
 
 });
 
+textArea.addEventListener("keyup", function(evt) {
+    var wordcount;
+    wordcount = textArea.value.split(/\b[\s,\.-:;]*/).length;
 
+    if (wordcount >= maxWords) { 
+        alert('Has llegado al límite de ' + (maxWords - 1) + ' palabras permitidas');
+        return false;      
+    }
 
+    // console.log('wordcount: ' + wordcount);
+
+});
 
 
 function hasFormValidation() {
@@ -116,9 +126,6 @@ form.addEventListener("submit", function(evt) {
             alert("Describe brevemente los requerimientos de tu proyecto");
             evt.preventDefault();
             return false;
-
-
-
         }
 
         // VALIDATION FOR IE9
@@ -153,6 +160,13 @@ form.addEventListener("submit", function(evt) {
         if (phoneNumInput.value.length == 0) {
             alert("Falta tu teléfono");
             phoneNumInput.focus();
+            evt.preventDefault();
+            return false;
+        }
+
+        if (document.getElementById("text-area").value.length == 0) {
+
+            alert("Describe brevemente los requerimientos de tu proyecto");
             evt.preventDefault();
             return false;
         }
